@@ -3,8 +3,9 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #2877d6;
+    background-color: #12161b;
     color: #333;
+    height: 5000px;
   }
   .container {
     max-width: 800px;
@@ -55,3 +56,41 @@ body {
     color: #eb9b33;
     transition: color 0.3s ease;
   }
+
+
+.blocker {
+  height:1000px;
+  margin-bottom: 100px;
+}
+
+.scroll-watcher {
+  height:10px;
+  position: fixed;
+  top:0;
+  z-index: 1000;
+  background-color: #eb9b33;
+  width: 100%;
+  scale:0 1;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+}
+
+.slide-in-right {
+animation: slide-in-right linear;
+animation-timeline: view();
+animation-range-start: 500px;
+/* animation-range-end: 500px; */
+}
+@keyframes slide-in-right {
+0% {
+  transform: translateX(100%);
+}
+100% {
+  transform: translateX(0);
+}
+}
+
+
+@keyframes scroll-watcher {
+  to { scale: 1 1;}
+}
