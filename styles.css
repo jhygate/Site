@@ -5,7 +5,6 @@ body {
     padding: 0;
     background-color: #12161b;
     color: #333;
-    height: 5000px;
   }
   .container {
     max-width: 800px;
@@ -75,20 +74,43 @@ body {
   animation-timeline: scroll();
 }
 
+
+
 .slide-in-right {
-animation: slide-in-right linear;
-animation-timeline: view();
-animation-range-start: 500px;
-/* animation-range-end: 500px; */
+  animation: slide-in-right linear forwards;
+  animation-timeline: view();
+  animation-range-start: contain;
+  animation-range-end: 500px;
+  transform: translateX(100vw);
 }
+
 @keyframes slide-in-right {
-0% {
-  transform: translateX(100%);
+  0% {
+    transform: translateX(100vw);  /* Start from 100% to the right */
+  }
+  100% {
+    transform: translateX(0);     /* End at the original position */
+  }
 }
-100% {
-  transform: translateX(0);
+
+.slide-in-left {
+  animation: slide-in-left linear forwards;
+  animation-timeline: view();
+  animation-range-start: contain;
+  animation-range-end: 500px;
+  transform: translateX(-100vw);
 }
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100vw);  /* Start from 100% to the right */
+  }
+  100% {
+    transform: translateX(0);     /* End at the original position */
+  }
 }
+
+
 
 
 @keyframes scroll-watcher {
