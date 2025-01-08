@@ -18,10 +18,9 @@ jobs:
       run: |
         echo "$PRIVATE_KEY" > github-ec2.pem && chmod 600 github-ec2.pem
         ssh -o StrictHostKeyChecking=no -i github-ec2.pem  ubuntu@13.60.181.19
-        ls
-        pwd
-        cd /home/ubuntu/Site
+        cd
+        cd /home/runner/work/Site
         git pull origin main
         rm -rf /var/www/html/*
-        cp -r /home/ubuntu/Site/* /var/www/html/
+        cp -r /home/runner/work/Site* /var/www/html/
         sudo systemctl restart nginx # Restart web server
