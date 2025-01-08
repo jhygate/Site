@@ -19,7 +19,8 @@ jobs:
         echo "$PRIVATE_KEY" > github-ec2.pem && chmod 600 github-ec2.pem
         ssh -o StrictHostKeyChecking=no -i github-ec2.pem  ubuntu@13.60.181.19
         cd
-        cd /home/runner/work/Site
+        git clone git@github.com:jhygate/Site.git
+        cd Site
         git pull origin main
         rm -rf /var/www/html/*
         cp -r /home/runner/work/Site* /var/www/html/
