@@ -1,0 +1,32 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches:
+      - main # Adjust branch as needed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # Step 2: Setup SSH Key
+      - name: Setup SSH Key
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.EC2_SSH_KEY }}
+
+      # Step 3: Run Deployment Commands on EC2
+      - name: Deploy to EC2
+        run: |
+          ssh -o StrictHostKeyChecking=no ubuntu@13.60.181.19 << EOF
+          cd Site
+          git pull origin main
+          rm -rf /var/www/html/*
+          cp -r /home/ubuntu/Site/* /var/www/html/
+          sudo systemctl restart nginx # Restart web server
+          EOF
