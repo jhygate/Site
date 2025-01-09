@@ -19,6 +19,8 @@ jobs:
         echo "$PRIVATE_KEY" > github-ec2.pem && chmod 600 github-ec2.pem
         ssh -o StrictHostKeyChecking=no -i github-ec2.pem  ubuntu@13.60.181.19
         cd
+        cd /var/www
+        ls
         cd /var/www/Site
         git pull origin main
         rm -rf /var/www/html/*
