@@ -20,11 +20,12 @@ jobs:
         uses: easingthemes/ssh-deploy@v2.1.5
         env:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
-          SOURCE: "Site/"
+          SOURCE: "./"
           REMOTE_HOST: "13.60.181.19"
           REMOTE_USER: "ubuntu"
           TARGET: "/var/www/html"
           SCRIPT_BEFORE: |
+            cd
             sudo rm -rf /var/www/html/*
           SCRIPT_AFTER: |
             sudo systemctl restart apache2
