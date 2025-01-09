@@ -6,26 +6,23 @@ on:
       - main # Adjust branch as needed
 
 
+
 jobs:
   deploy:
+    name: Push to EC2 Instance
     runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    
-    - name: Deploy to EC2
-      env:
-        PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
-      run: |
-        echo "$PRIVATE_KEY" > github-ec2.pem && chmod 600 github-ec2.pem
-        ssh -o StrictHostKeyChecking=no -i github-ec2.pem  ubuntu@13.60.181.19
 
-        cd
-        cd /var/www
-        sudo chown -R $USER:$USER /var/www
-        git clone git@github.com:jhygate/Site.git
-        ls
-        cd /var/www/Site
-        git pull origin main
-        rm -rf /var/www/html/*
-        cp -r /var/www/Site/* /var/www/html/
-        sudo systemctl restart nginx # Restart web server
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v1
+
+      - name: Deploy to my EC2 instance
+        uses: easingthemes/ssh-deploy@v2.1.5
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+          SOURCE: "./Site"
+          REMOTE_HOST: "13.60.181.19"
+          REMOTE_USER: "ubuntu"
+          TARGET: "/var/www/html"
+          SCRIPT_BEFORE: "sudo rm -rf /var/www/html/*"
+          SCRERIPT_AFTER: "sudo systemctl restart apache2"
