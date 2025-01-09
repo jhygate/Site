@@ -19,7 +19,8 @@ jobs:
         echo "$PRIVATE_KEY" > github-ec2.pem && chmod 600 github-ec2.pem
         ssh -o StrictHostKeyChecking=no -i github-ec2.pem  ubuntu@13.60.181.19
 
-        ssh-keygen -t ed25519 -C "your-email@example.com"
+        ssh-keygen -t ed25519 -C "jhygate@gmail.com" -f ~/.ssh/id_ed25519 -N ""
+
         cat ~/.ssh/id_ed25519.pub
 
 
