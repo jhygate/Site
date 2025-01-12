@@ -79,12 +79,52 @@ body {
     width: fill-available;
     height: 150px;
     margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+
   }
 
   .info-box img {
+    flex: 8;
     width: 100%; /* Make the image fill the width of the container */
     height: 100%; /* Make the image fill the height of the container */
     object-fit: contain; /* Ensures the image scales properly to cover the container */
+    height: 0;
+  }
+
+  .info-box-header {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+  }
+
+  .info-box-title {
+    flex: 8;
+  }
+
+  .info-box-title h2 {
+    text-align: center; /
+  }
+
+  .image-and-date{
+    flex: 2;
+    height:inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .image-and-date p {
+    flex: 2;
+    margin: 0; /* Reset margins to prevent overflow */
+    text-align: center; /* Optional: Align text nicely */
+  }
+
+
+  .info-box-right h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 10px;
   }
 
   .uj-gradient{
