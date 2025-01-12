@@ -77,11 +77,17 @@ body {
     border-radius: 25px;
     padding: 20px;
     width: fill-available;
-    height: 150px;
+    height: fill-available;
     margin-top: 2em;
     display: flex;
     flex-direction: column;
 
+  }
+
+  .info-box li{
+    font-size: 0.5em;
+    list-style-type: none;
+    margin-top: 1em;
   }
 
   .info-box img {
