@@ -17,3 +17,20 @@ function updateDivPos() {
     const scrollPosition = window.scrollY; // Current vertical scroll position
     mask.style.setProperty('top', `${scrollPosition}px`);
 }
+
+
+const toggleButton = document.getElementById('toggleButton');
+const pictureContainer = document.getElementById('pictureContainerUJ');
+
+toggleButton.addEventListener('click', () => {
+  // Toggle between 'collapsed' and 'expanded' classes
+  pictureContainer.classList.toggle('collapsed');
+  pictureContainer.classList.toggle('expanded');
+
+  // Update button text
+  if (pictureContainer.classList.contains('expanded')) {
+    toggleButton.innerHTML = '&#x25B2;'; 
+  } else {
+    toggleButton.innerHTML = '&#x25BC;';
+  }
+});

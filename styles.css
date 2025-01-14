@@ -66,7 +66,7 @@ body {
     text-align: left;
     margin-top: 0;
     margin-bottom: 0;
-    font-weight: 100;
+    font-weight: 400;
   }
 
   p {
@@ -204,7 +204,23 @@ body {
 }
 
 
-
+.toggle-button{
+  color: rgb(94 234 212);
+  border-radius: 9999px;
+  background-color: rgba(45, 212, 191, .1);
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  padding-left: .75rem;
+  padding-right: .75rem;
+  margin-right: .375rem;
+  margin-top: .5rem;
+  font-weight: 500;
+  list-style-type: none;
+  margin-top: 1em;
+}
+.toggle-button:hover {
+  color: rgb(56, 147, 133);; /* Darker Green */
+}
 
 .mask {
   position: absolute;
@@ -216,4 +232,25 @@ body {
     600px circle at var(--mouse-x) var(--mouse-y),
     rgba(29, 78, 216, 0.15),
     transparent 80%);
+}
+
+#pictureContainerUJ {
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+
+#pictureContainerUJ img {
+  display: block;
+  width: 100%; /* Adjust as needed */
+  margin-bottom: 10px;
+}
+
+/* Collapsed state */
+.collapsed {
+  height: 0;
+}
+
+/* Expanded state */
+.expanded {
+  height: 500px; /* Adjust this to the max height of your content */
 }
