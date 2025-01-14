@@ -82,13 +82,10 @@ body {
     margin-top: 2em;
     display: flex;
     flex-direction: column;
-
   }
-
-  .info-box li{
-    font-size: 0.5em;
-    list-style-type: none;
-    margin-top: 1em;
+  .info-box p {
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .info-box img {
@@ -146,6 +143,29 @@ body {
   color: rgb(148 163 184);
   margin-left: 50px;
   margin-right: 50px;
+}
+
+.technologies-list{
+  flex-wrap: wrap;
+  display: flex;
+  margin-top: 0.5rem;
+  margin-left: 20px;
+  padding-left: 0;
+}
+
+.tech-bubble {
+  color: rgb(94 234 212);
+  border-radius: 9999px;
+  background-color: rgba(45, 212, 191, .1);
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  padding-left: .75rem;
+  padding-right: .75rem;
+  margin-right: .375rem;
+  margin-top: .5rem;
+  font-weight: 500;
+  list-style-type: none;
+  margin-top: 1em;
 }
 
 
