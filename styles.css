@@ -3,12 +3,11 @@
 
 
 body {
-    font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     background-color: rgba(15, 23, 42, 1.0);
-    font-family: 'Inter';font-size: 22px;
+    font-family: 'Inter', sans-serif;
     height: fit-content;
   }
 
@@ -51,21 +50,23 @@ body {
     justify-content: left; /* Center items horizontally */
     align-items: center; /* Align items vertically */
     gap: 16px; /* Add spacing between the SVGs */
+    margin-top: 10px;
   }
   h1 {
-    font-size: 2em;
-    color: white;
+    font-size: 3rem;
+    color: rgb(226 232 240);
     text-align: left;
     margin-top: 0;
     margin-bottom: 0;
   }
 
   h2 {
-    font-size: 1em;
-    color: white;
+    font-size: 1.25rem;
+    color: rgb(226 232 240);
     text-align: left;
     margin-top: 0;
     margin-bottom: 0;
+    font-weight: 100;
   }
 
   p {
@@ -133,13 +134,19 @@ body {
     margin-left: 10px;
   }
 
-  .uj-gradient{
-    background:  linear-gradient(to left , #FF6414, #013ED5);
-  }
+  .uj-gradient {
+    background: linear-gradient(to left, rgba(255, 100, 20, 0.75), rgba(1, 62, 213, 0.25));
+}
 
-  .skuuudle-gradient{
-    background:  linear-gradient(to left ,  #b4b3b3, #6214A1);
-  }
+.skuuudle-gradient {
+    background: linear-gradient(to left, rgba(180, 179, 179, 0.75), rgba(98, 20, 161, 0.25));
+}
+
+.about {
+  color: rgb(148 163 184);
+  margin-left: 50px;
+  margin-right: 50px;
+}
 
 
 
