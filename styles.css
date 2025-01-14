@@ -19,6 +19,18 @@ body {
     padding-right: 3rem;
     height: fit-content;
   }
+
+  @media (max-width: 768px) {
+ 
+    .container {
+      display: flex;
+      flex-direction: column;
+      height:100vh;
+      padding-left: 3rem;
+      padding-right: 3rem;
+      height: fit-content;
+    }
+  }
  
   .left {
     flex: 1;
