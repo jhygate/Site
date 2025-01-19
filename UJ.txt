@@ -1,0 +1,9 @@
+I'm currently working at UJ an exciting insurtech starup, working to bring fairness and transparency and ease of use to the insurance industry.
+
+I work in small, agile, cross functional teams where I help plan new features, scope functionality with the key stakeholders and implement them! I'm there from resourcing all the way up to code-review, final product testing , live feature monitoring and urgent fixes (not that we ever need any of those...)
+
+I'm working mostly with Python in the backend and tooling, and Angular for the frontend as well as dabling in platorm work with AWS, Kubernetes, Docker and Gitlab CI/CD.
+
+My favourite project has been working with the Data Science team to reafactor and rebuild thir ML pricing pipeline
+. I helped optimise it from a multi-day process, to a 2 hour process, with increased visibilty, error handling,
+tetsing and ease of use with Dagster, MlFlow and platform work.

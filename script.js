@@ -34,3 +34,7 @@ toggleButton.addEventListener('click', () => {
     toggleButton.innerHTML = '&#x25BC;';
   }
 });
+
+function redirectToWebsite(url) {
+  window.location.href = url; // Replace with your URL
+}
