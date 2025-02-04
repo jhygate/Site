@@ -12,6 +12,7 @@ body {
   }
 
   .container {
+    padding-top: 3rem;
     display: flex;
     flex-direction: row;
     height:100vh;
@@ -34,7 +35,6 @@ body {
  
   .left {
     flex: 1;
-    padding-top: 6rem;
     padding-left: 3rem;
     height: fit-content;
   }
@@ -44,7 +44,6 @@ body {
 
   .right {
     flex: 2;
-    padding-top: 6rem;
     height: fit-content;
   }
 
@@ -297,4 +296,19 @@ body {
 .experience{
   display: grid;
   justify-items: center;
+}
+
+.title-bar{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu-item{
+  margin-top: 20px;
+  font-size: 2rem;
+  color: rgb(226 232 240);
+  text-align: left;
+  font-weight: 800;
 }
